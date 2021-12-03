@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/270403__littlerobotsoundfactory__jingle-lose-00.wav-0e50ce5a4f13483369a848e5b555a9fb.sample"
+
+[deps]
+
+source_file="res://assets/game_over/270403__littlerobotsoundfactory__jingle-lose-00.wav"
+dest_files=[ "res://.import/270403__littlerobotsoundfactory__jingle-lose-00.wav-0e50ce5a4f13483369a848e5b555a9fb.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

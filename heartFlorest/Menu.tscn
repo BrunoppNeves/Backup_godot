@@ -1,0 +1,77 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://Menu.gd" type="Script" id=1]
+[ext_resource path="res://assets/player/idle/adventurer-idle-00.png" type="Texture" id=2]
+[ext_resource path="res://assets/game_over/3_A01-2_BlackHounds_Downtown_Hideout_night.png" type="Texture" id=3]
+[ext_resource path="res://assets/candy_beans/Candy Beans.otf" type="DynamicFontData" id=4]
+
+[sub_resource type="DynamicFont" id=1]
+size = 50
+font_data = ExtResource( 4 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 38
+font_data = ExtResource( 4 )
+
+[node name="Menu" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Sprite" type="Sprite" parent="."]
+scale = Vector2( 0.786322, 0.852825 )
+texture = ExtResource( 3 )
+offset = Vector2( 640, 360 )
+
+[node name="Sprite2" type="Sprite" parent="."]
+position = Vector2( 498.362, 349.032 )
+scale = Vector2( 4.71282, 4.77331 )
+texture = ExtResource( 2 )
+
+[node name="CenterContainer" type="CenterContainer" parent="."]
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -1002.46
+margin_top = -144.002
+margin_right = -2.45544
+margin_bottom = -106.002
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+margin_left = 455.545
+margin_top = 460.998
+margin_right = 538.545
+margin_bottom = 498.998
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="."]
+margin_left = 342.521
+margin_top = 137.651
+margin_right = 647.521
+margin_bottom = 203.651
+custom_fonts/font = SubResource( 1 )
+text = "Heart Florest"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button" type="Button" parent="."]
+margin_left = 408.246
+margin_top = 479.352
+margin_right = 583.246
+margin_bottom = 521.352
+custom_fonts/font = SubResource( 2 )
+text = "Start"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]

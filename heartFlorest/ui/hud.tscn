@@ -1,0 +1,26 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://ui/over.png" type="Texture" id=1]
+[ext_resource path="res://ui/hud.gd" type="Script" id=2]
+[ext_resource path="res://ui/red.png" type="Texture" id=3]
+[ext_resource path="res://ui/background.png" type="Texture" id=4]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource( 2 )
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="TextureProgress" type="TextureProgress" parent="CanvasLayer"]
+visible = false
+margin_left = 22.1606
+margin_top = 18.8366
+margin_right = 302.161
+margin_bottom = 58.8366
+value = 100.0
+texture_under = ExtResource( 4 )
+texture_over = ExtResource( 1 )
+texture_progress = ExtResource( 3 )
+nine_patch_stretch = true
+__meta__ = {
+"_edit_use_anchors_": false
+}

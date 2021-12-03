@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/572624__bloodpixelhero__game-win.wav-5eb8aa61a5d24003ca7938cc0189e1a5.sample"
+
+[deps]
+
+source_file="res://assets/game_over/572624__bloodpixelhero__game-win.wav"
+dest_files=[ "res://.import/572624__bloodpixelhero__game-win.wav-5eb8aa61a5d24003ca7938cc0189e1a5.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

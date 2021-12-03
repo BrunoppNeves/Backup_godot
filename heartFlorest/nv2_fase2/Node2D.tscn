@@ -1,0 +1,808 @@
+[gd_scene load_steps=27 format=2]
+
+[ext_resource path="res://nv1_fase1/Camera2D.gd" type="Script" id=1]
+[ext_resource path="res://assets/env_p1/tilemap_1/Tiles.png" type="Texture" id=2]
+[ext_resource path="res://assets/env_p1/tilemap/tileset.png" type="Texture" id=3]
+[ext_resource path="res://assets/env_p1/bg/clouds.png" type="Texture" id=4]
+[ext_resource path="res://assets/env_p1/bg/sky.png" type="Texture" id=5]
+[ext_resource path="res://assets/env_p1/bg/sea.png" type="Texture" id=6]
+[ext_resource path="res://assets/env_p1/bg/far-grounds.png" type="Texture" id=7]
+[ext_resource path="res://player1/KinematicBody2D.tscn" type="PackedScene" id=8]
+[ext_resource path="res://assets/env_nv2/Wasteland-Files.png" type="Texture" id=9]
+[ext_resource path="res://Troca_fase2.tscn" type="PackedScene" id=10]
+[ext_resource path="res://assets/env_nv2/parallax-mountain-bg.png" type="Texture" id=11]
+[ext_resource path="res://assets/env_p1/style_cemetery/tileset.png" type="Texture" id=12]
+[ext_resource path="res://nv2_fase2/Node2D.gd" type="Script" id=13]
+
+[sub_resource type="ConvexPolygonShape2D" id=1]
+points = PoolVector2Array( 80, 0, 16, 0, 16, 0, 80, 0 )
+
+[sub_resource type="ConvexPolygonShape2D" id=2]
+points = PoolVector2Array( 0, 0, 80, 0, 80, 16, 0, 16 )
+
+[sub_resource type="ConvexPolygonShape2D" id=3]
+points = PoolVector2Array( 0, 0, 80, 0, 80, 16, 0, 16 )
+
+[sub_resource type="TileSet" id=4]
+0/name = "Wasteland-Files.png 0"
+0/texture = ExtResource( 9 )
+0/tex_offset = Vector2( 0, 0 )
+0/modulate = Color( 1, 1, 1, 1 )
+0/region = Rect2( 128, 192, 80, 16 )
+0/tile_mode = 0
+0/occluder_offset = Vector2( 0, 0 )
+0/navigation_offset = Vector2( 0, 0 )
+0/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 1 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+}, {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 2 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+}, {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 3 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+0/z_index = 0
+
+[sub_resource type="TileSet" id=5]
+0/name = "Wasteland-Files.png 0"
+0/texture = ExtResource( 9 )
+0/tex_offset = Vector2( 0, 0 )
+0/modulate = Color( 1, 1, 1, 1 )
+0/region = Rect2( 312, 120, 96, 24 )
+0/tile_mode = 0
+0/occluder_offset = Vector2( 0, 0 )
+0/navigation_offset = Vector2( 0, 0 )
+0/shapes = [  ]
+0/z_index = 0
+
+[sub_resource type="TileSet" id=6]
+0/name = "tileset.png 0"
+0/texture = ExtResource( 3 )
+0/tex_offset = Vector2( 0, 0 )
+0/modulate = Color( 1, 1, 1, 1 )
+0/region = Rect2( 416, 160, 32, 32 )
+0/tile_mode = 0
+0/occluder_offset = Vector2( 0, 0 )
+0/navigation_offset = Vector2( 0, 0 )
+0/shapes = [  ]
+0/z_index = 0
+1/name = "tileset.png 1"
+1/texture = ExtResource( 3 )
+1/tex_offset = Vector2( 0, 0 )
+1/modulate = Color( 1, 1, 1, 1 )
+1/region = Rect2( 448, 160, 32, 32 )
+1/tile_mode = 0
+1/occluder_offset = Vector2( 0, 0 )
+1/navigation_offset = Vector2( 0, 0 )
+1/shapes = [  ]
+1/z_index = 0
+2/name = "tileset.png 2"
+2/texture = ExtResource( 3 )
+2/tex_offset = Vector2( 0, 0 )
+2/modulate = Color( 1, 1, 1, 1 )
+2/region = Rect2( 416, 192, 32, 32 )
+2/tile_mode = 0
+2/occluder_offset = Vector2( 0, 0 )
+2/navigation_offset = Vector2( 0, 0 )
+2/shapes = [  ]
+2/z_index = 0
+3/name = "tileset.png 3"
+3/texture = ExtResource( 3 )
+3/tex_offset = Vector2( 0, 0 )
+3/modulate = Color( 1, 1, 1, 1 )
+3/region = Rect2( 448, 192, 32, 32 )
+3/tile_mode = 0
+3/occluder_offset = Vector2( 0, 0 )
+3/navigation_offset = Vector2( 0, 0 )
+3/shapes = [  ]
+3/z_index = 0
+
+[sub_resource type="TileSet" id=7]
+0/name = "Tiles.png 0"
+0/texture = ExtResource( 2 )
+0/tex_offset = Vector2( 0, 0 )
+0/modulate = Color( 1, 1, 1, 1 )
+0/region = Rect2( 224, 96, 32, 32 )
+0/tile_mode = 0
+0/occluder_offset = Vector2( 0, 0 )
+0/navigation_offset = Vector2( 0, 0 )
+0/shapes = [  ]
+0/z_index = 0
+1/name = "Tiles.png 1"
+1/texture = ExtResource( 2 )
+1/tex_offset = Vector2( 0, 0 )
+1/modulate = Color( 1, 1, 1, 1 )
+1/region = Rect2( 224, 64, 32, 32 )
+1/tile_mode = 0
+1/occluder_offset = Vector2( 0, 0 )
+1/navigation_offset = Vector2( 0, 0 )
+1/shapes = [  ]
+1/z_index = 0
+2/name = "Tiles.png 2"
+2/texture = ExtResource( 2 )
+2/tex_offset = Vector2( 0, 0 )
+2/modulate = Color( 1, 1, 1, 1 )
+2/region = Rect2( 224, 32, 32, 32 )
+2/tile_mode = 0
+2/occluder_offset = Vector2( 0, 0 )
+2/navigation_offset = Vector2( 0, 0 )
+2/shapes = [  ]
+2/z_index = 0
+3/name = "Tiles.png 3"
+3/texture = ExtResource( 2 )
+3/tex_offset = Vector2( 0, 0 )
+3/modulate = Color( 1, 1, 1, 1 )
+3/region = Rect2( 192, 64, 32, 32 )
+3/tile_mode = 0
+3/occluder_offset = Vector2( 0, 0 )
+3/navigation_offset = Vector2( 0, 0 )
+3/shapes = [  ]
+3/z_index = 0
+4/name = "Tiles.png 4"
+4/texture = ExtResource( 2 )
+4/tex_offset = Vector2( 0, 0 )
+4/modulate = Color( 1, 1, 1, 1 )
+4/region = Rect2( 192, 96, 32, 32 )
+4/tile_mode = 0
+4/occluder_offset = Vector2( 0, 0 )
+4/navigation_offset = Vector2( 0, 0 )
+4/shapes = [  ]
+4/z_index = 0
+5/name = "Tiles.png 5"
+5/texture = ExtResource( 2 )
+5/tex_offset = Vector2( 0, 0 )
+5/modulate = Color( 1, 1, 1, 1 )
+5/region = Rect2( 256, 32, 32, 32 )
+5/tile_mode = 0
+5/occluder_offset = Vector2( 0, 0 )
+5/navigation_offset = Vector2( 0, 0 )
+5/shapes = [  ]
+5/z_index = 0
+6/name = "Tiles.png 6"
+6/texture = ExtResource( 2 )
+6/tex_offset = Vector2( 0, 0 )
+6/modulate = Color( 1, 1, 1, 1 )
+6/region = Rect2( 256, 64, 32, 32 )
+6/tile_mode = 0
+6/occluder_offset = Vector2( 0, 0 )
+6/navigation_offset = Vector2( 0, 0 )
+6/shapes = [  ]
+6/z_index = 0
+7/name = "Tiles.png 7"
+7/texture = ExtResource( 2 )
+7/tex_offset = Vector2( 0, 0 )
+7/modulate = Color( 1, 1, 1, 1 )
+7/region = Rect2( 256, 96, 32, 32 )
+7/tile_mode = 0
+7/occluder_offset = Vector2( 0, 0 )
+7/navigation_offset = Vector2( 0, 0 )
+7/shapes = [  ]
+7/z_index = 0
+8/name = "Tiles.png 8"
+8/texture = ExtResource( 2 )
+8/tex_offset = Vector2( 0, 0 )
+8/modulate = Color( 1, 1, 1, 1 )
+8/region = Rect2( 288, 64, 32, 32 )
+8/tile_mode = 0
+8/occluder_offset = Vector2( 0, 0 )
+8/navigation_offset = Vector2( 0, 0 )
+8/shapes = [  ]
+8/z_index = 0
+9/name = "Tiles.png 9"
+9/texture = ExtResource( 2 )
+9/tex_offset = Vector2( 0, 0 )
+9/modulate = Color( 1, 1, 1, 1 )
+9/region = Rect2( 288, 96, 32, 32 )
+9/tile_mode = 0
+9/occluder_offset = Vector2( 0, 0 )
+9/navigation_offset = Vector2( 0, 0 )
+9/shapes = [  ]
+9/z_index = 0
+10/name = "Tiles.png 10"
+10/texture = ExtResource( 2 )
+10/tex_offset = Vector2( 0, 0 )
+10/modulate = Color( 1, 1, 1, 1 )
+10/region = Rect2( 64, 224, 32, 32 )
+10/tile_mode = 0
+10/occluder_offset = Vector2( 0, 0 )
+10/navigation_offset = Vector2( 0, 0 )
+10/shapes = [  ]
+10/z_index = 0
+
+[sub_resource type="TileSet" id=8]
+0/name = "Tiles.png 0"
+0/texture = ExtResource( 2 )
+0/tex_offset = Vector2( 0, 0 )
+0/modulate = Color( 1, 1, 1, 1 )
+0/region = Rect2( 64, 224, 32, 32 )
+0/tile_mode = 0
+0/occluder_offset = Vector2( 0, 0 )
+0/navigation_offset = Vector2( 0, 0 )
+0/shapes = [  ]
+0/z_index = 0
+1/name = "Tiles.png 1"
+1/texture = ExtResource( 2 )
+1/tex_offset = Vector2( 0, 0 )
+1/modulate = Color( 1, 1, 1, 1 )
+1/region = Rect2( 64, 256, 32, 32 )
+1/tile_mode = 0
+1/occluder_offset = Vector2( 0, 0 )
+1/navigation_offset = Vector2( 0, 0 )
+1/shapes = [  ]
+1/z_index = 0
+2/name = "Tiles.png 2"
+2/texture = ExtResource( 2 )
+2/tex_offset = Vector2( 0, 0 )
+2/modulate = Color( 1, 1, 1, 1 )
+2/region = Rect2( 96, 224, 32, 32 )
+2/tile_mode = 0
+2/occluder_offset = Vector2( 0, 0 )
+2/navigation_offset = Vector2( 0, 0 )
+2/shapes = [  ]
+2/z_index = 0
+3/name = "Tiles.png 3"
+3/texture = ExtResource( 2 )
+3/tex_offset = Vector2( 0, 0 )
+3/modulate = Color( 1, 1, 1, 1 )
+3/region = Rect2( 96, 256, 32, 32 )
+3/tile_mode = 0
+3/occluder_offset = Vector2( 0, 0 )
+3/navigation_offset = Vector2( 0, 0 )
+3/shapes = [  ]
+3/z_index = 0
+4/name = "Tiles.png 4"
+4/texture = ExtResource( 2 )
+4/tex_offset = Vector2( 0, 0 )
+4/modulate = Color( 1, 1, 1, 1 )
+4/region = Rect2( 128, 224, 32, 32 )
+4/tile_mode = 0
+4/occluder_offset = Vector2( 0, 0 )
+4/navigation_offset = Vector2( 0, 0 )
+4/shapes = [  ]
+4/z_index = 0
+5/name = "Tiles.png 5"
+5/texture = ExtResource( 2 )
+5/tex_offset = Vector2( 0, 0 )
+5/modulate = Color( 1, 1, 1, 1 )
+5/region = Rect2( 128, 256, 32, 32 )
+5/tile_mode = 0
+5/occluder_offset = Vector2( 0, 0 )
+5/navigation_offset = Vector2( 0, 0 )
+5/shapes = [  ]
+5/z_index = 0
+6/name = "Tiles.png 6"
+6/texture = ExtResource( 2 )
+6/tex_offset = Vector2( 0, 0 )
+6/modulate = Color( 1, 1, 1, 1 )
+6/region = Rect2( 160, 224, 32, 32 )
+6/tile_mode = 0
+6/occluder_offset = Vector2( 0, 0 )
+6/navigation_offset = Vector2( 0, 0 )
+6/shapes = [  ]
+6/z_index = 0
+7/name = "Tiles.png 7"
+7/texture = ExtResource( 2 )
+7/tex_offset = Vector2( 0, 0 )
+7/modulate = Color( 1, 1, 1, 1 )
+7/region = Rect2( 160, 256, 32, 32 )
+7/tile_mode = 0
+7/occluder_offset = Vector2( 0, 0 )
+7/navigation_offset = Vector2( 0, 0 )
+7/shapes = [  ]
+7/z_index = 0
+8/name = "Tiles.png 8"
+8/texture = ExtResource( 2 )
+8/tex_offset = Vector2( 0, 0 )
+8/modulate = Color( 1, 1, 1, 1 )
+8/region = Rect2( 128, 0, 32, 32 )
+8/tile_mode = 0
+8/occluder_offset = Vector2( 0, 0 )
+8/navigation_offset = Vector2( 0, 0 )
+8/shapes = [  ]
+8/z_index = 0
+9/name = "Tiles.png 9"
+9/texture = ExtResource( 2 )
+9/tex_offset = Vector2( 0, 0 )
+9/modulate = Color( 1, 1, 1, 1 )
+9/region = Rect2( 128, 32, 32, 32 )
+9/tile_mode = 0
+9/occluder_offset = Vector2( 0, 0 )
+9/navigation_offset = Vector2( 0, 0 )
+9/shapes = [  ]
+9/z_index = 0
+10/name = "Tiles.png 10"
+10/texture = ExtResource( 2 )
+10/tex_offset = Vector2( 0, 0 )
+10/modulate = Color( 1, 1, 1, 1 )
+10/region = Rect2( 160, 0, 32, 32 )
+10/tile_mode = 0
+10/occluder_offset = Vector2( 0, 0 )
+10/navigation_offset = Vector2( 0, 0 )
+10/shapes = [  ]
+10/z_index = 0
+11/name = "Tiles.png 11"
+11/texture = ExtResource( 2 )
+11/tex_offset = Vector2( 0, 0 )
+11/modulate = Color( 1, 1, 1, 1 )
+11/region = Rect2( 160, 32, 32, 32 )
+11/tile_mode = 0
+11/occluder_offset = Vector2( 0, 0 )
+11/navigation_offset = Vector2( 0, 0 )
+11/shapes = [  ]
+11/z_index = 0
+12/name = "Tiles.png 12"
+12/texture = ExtResource( 2 )
+12/tex_offset = Vector2( 0, 0 )
+12/modulate = Color( 1, 1, 1, 1 )
+12/region = Rect2( 192, 0, 32, 32 )
+12/tile_mode = 0
+12/occluder_offset = Vector2( 0, 0 )
+12/navigation_offset = Vector2( 0, 0 )
+12/shapes = [  ]
+12/z_index = 0
+13/name = "Tiles.png 13"
+13/texture = ExtResource( 2 )
+13/tex_offset = Vector2( 0, 0 )
+13/modulate = Color( 1, 1, 1, 1 )
+13/region = Rect2( 192, 32, 32, 32 )
+13/tile_mode = 0
+13/occluder_offset = Vector2( 0, 0 )
+13/navigation_offset = Vector2( 0, 0 )
+13/shapes = [  ]
+13/z_index = 0
+
+[sub_resource type="TileSet" id=9]
+0/name = "Tiles.png 0"
+0/texture = ExtResource( 2 )
+0/tex_offset = Vector2( 0, 0 )
+0/modulate = Color( 1, 1, 1, 1 )
+0/region = Rect2( 128, 0, 32, 32 )
+0/tile_mode = 0
+0/occluder_offset = Vector2( 0, 0 )
+0/navigation_offset = Vector2( 0, 0 )
+0/shapes = [  ]
+0/z_index = 0
+1/name = "Tiles.png 1"
+1/texture = ExtResource( 2 )
+1/tex_offset = Vector2( 0, 0 )
+1/modulate = Color( 1, 1, 1, 1 )
+1/region = Rect2( 128, 32, 32, 32 )
+1/tile_mode = 0
+1/occluder_offset = Vector2( 0, 0 )
+1/navigation_offset = Vector2( 0, 0 )
+1/shapes = [  ]
+1/z_index = 0
+2/name = "Tiles.png 2"
+2/texture = ExtResource( 2 )
+2/tex_offset = Vector2( 0, 0 )
+2/modulate = Color( 1, 1, 1, 1 )
+2/region = Rect2( 160, 0, 32, 32 )
+2/tile_mode = 0
+2/occluder_offset = Vector2( 0, 0 )
+2/navigation_offset = Vector2( 0, 0 )
+2/shapes = [  ]
+2/z_index = 0
+3/name = "Tiles.png 3"
+3/texture = ExtResource( 2 )
+3/tex_offset = Vector2( 0, 0 )
+3/modulate = Color( 1, 1, 1, 1 )
+3/region = Rect2( 160, 32, 32, 32 )
+3/tile_mode = 0
+3/occluder_offset = Vector2( 0, 0 )
+3/navigation_offset = Vector2( 0, 0 )
+3/shapes = [  ]
+3/z_index = 0
+4/name = "Tiles.png 4"
+4/texture = ExtResource( 2 )
+4/tex_offset = Vector2( 0, 0 )
+4/modulate = Color( 1, 1, 1, 1 )
+4/region = Rect2( 192, 0, 32, 32 )
+4/tile_mode = 0
+4/occluder_offset = Vector2( 0, 0 )
+4/navigation_offset = Vector2( 0, 0 )
+4/shapes = [  ]
+4/z_index = 0
+5/name = "Tiles.png 5"
+5/texture = ExtResource( 2 )
+5/tex_offset = Vector2( 0, 0 )
+5/modulate = Color( 1, 1, 1, 1 )
+5/region = Rect2( 192, 32, 32, 32 )
+5/tile_mode = 0
+5/occluder_offset = Vector2( 0, 0 )
+5/navigation_offset = Vector2( 0, 0 )
+5/shapes = [  ]
+5/z_index = 0
+
+[sub_resource type="RectangleShape2D" id=10]
+extents = Vector2( 85, 15.5 )
+
+[sub_resource type="RectangleShape2D" id=11]
+extents = Vector2( 642.789, 10 )
+
+[sub_resource type="TileSet" id=12]
+0/name = "tileset.png 0"
+0/texture = ExtResource( 12 )
+0/tex_offset = Vector2( 0, 0 )
+0/modulate = Color( 1, 1, 1, 1 )
+0/region = Rect2( 128, 64, 32, 32 )
+0/tile_mode = 0
+0/occluder_offset = Vector2( 0, 0 )
+0/navigation_offset = Vector2( 0, 0 )
+0/shapes = [  ]
+0/z_index = 0
+
+[sub_resource type="RectangleShape2D" id=13]
+extents = Vector2( 237.696, 16.6687 )
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource( 13 )
+
+[node name="Troca_fase" parent="." instance=ExtResource( 10 )]
+position = Vector2( 1390.29, -1869.82 )
+scale = Vector2( 2, 3 )
+
+[node name="KinematicBody2D" parent="." groups=[
+"player",
+] instance=ExtResource( 8 )]
+position = Vector2( 94, 181 )
+scale = Vector2( 2, 2 )
+collision_layer = 2
+
+[node name="Camera2D" type="Camera2D" parent="KinematicBody2D"]
+current = true
+limit_left = 0
+limit_top = -2100
+limit_right = 1570
+limit_bottom = 600
+editor_draw_screen = false
+script = ExtResource( 1 )
+
+[node name="Control" type="Control" parent="."]
+margin_right = 40.0
+margin_bottom = 40.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="Control"]
+follow_viewport_enable = true
+
+[node name="Sprite" type="Sprite" parent="Control/ParallaxBackground"]
+position = Vector2( 785.967, -245.743 )
+scale = Vector2( 5.77811, 4.07341 )
+texture = ExtResource( 11 )
+
+[node name="Sprite2" type="Sprite" parent="Control/ParallaxBackground"]
+position = Vector2( 785.967, -468.819 )
+scale = Vector2( 5.79228, 4.07188 )
+texture = ExtResource( 11 )
+
+[node name="Sprite3" type="Sprite" parent="Control/ParallaxBackground"]
+position = Vector2( 785.967, -733.155 )
+scale = Vector2( 5.79228, 4.07188 )
+texture = ExtResource( 11 )
+
+[node name="Sprite4" type="Sprite" parent="Control/ParallaxBackground"]
+position = Vector2( 785.967, -1004.98 )
+scale = Vector2( 5.79228, 4.07188 )
+texture = ExtResource( 11 )
+
+[node name="Sprite5" type="Sprite" parent="Control/ParallaxBackground"]
+position = Vector2( 785.967, -1277.23 )
+scale = Vector2( 5.79228, 4.07188 )
+texture = ExtResource( 11 )
+
+[node name="Sprite6" type="Sprite" parent="Control/ParallaxBackground"]
+position = Vector2( 785.967, -1546.32 )
+scale = Vector2( 5.79228, 4.07188 )
+texture = ExtResource( 11 )
+
+[node name="Sprite7" type="Sprite" parent="Control/ParallaxBackground"]
+position = Vector2( 785.967, -1799.76 )
+scale = Vector2( 5.79228, 4.07188 )
+texture = ExtResource( 11 )
+
+[node name="Control2" type="Control" parent="."]
+margin_right = 40.0
+margin_bottom = 40.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TileMap2" type="TileMap" parent="Control2"]
+position = Vector2( -169, 172 )
+scale = Vector2( 3, 2 )
+tile_set = SubResource( 4 )
+format = 1
+tile_data = PoolIntArray( 131078, 0, 0 )
+
+[node name="TileMap15" type="TileMap" parent="Control2"]
+position = Vector2( 72.7491, -41.689 )
+scale = Vector2( 3, 2 )
+tile_set = SubResource( 4 )
+format = 1
+tile_data = PoolIntArray( 131078, 0, 0 )
+
+[node name="TileMap3" type="TileMap" parent="Control2"]
+position = Vector2( 117.419, -2060.54 )
+scale = Vector2( 3, 2 )
+tile_set = SubResource( 4 )
+format = 1
+tile_data = PoolIntArray( 131078, 0, 0 )
+
+[node name="TileMap5" type="TileMap" parent="Control2"]
+position = Vector2( -285.406, -1932.23 )
+scale = Vector2( 3, 2 )
+tile_set = SubResource( 4 )
+format = 1
+tile_data = PoolIntArray( 131078, 0, 0 )
+
+[node name="TileMap6" type="TileMap" parent="Control2"]
+position = Vector2( -253.892, -229.89 )
+scale = Vector2( 3, 2 )
+tile_set = SubResource( 4 )
+format = 1
+tile_data = PoolIntArray( 131078, 0, 0 )
+
+[node name="TileMap7" type="TileMap" parent="Control2"]
+position = Vector2( -629.323, -470.335 )
+scale = Vector2( 3, 2 )
+tile_set = SubResource( 4 )
+format = 1
+tile_data = PoolIntArray( 131078, 0, 0 )
+
+[node name="TileMap8" type="TileMap" parent="Control2"]
+position = Vector2( -1054.74, -683.476 )
+scale = Vector2( 3, 2 )
+tile_set = SubResource( 4 )
+format = 1
+tile_data = PoolIntArray( 131078, 0, 0 )
+
+[node name="TileMap14" type="TileMap" parent="Control2"]
+position = Vector2( -719.106, -895.814 )
+scale = Vector2( 3, 2 )
+tile_set = SubResource( 4 )
+format = 1
+tile_data = PoolIntArray( 131078, 0, 0 )
+
+[node name="TileMap9" type="TileMap" parent="Control2"]
+position = Vector2( -413.142, -1022.48 )
+scale = Vector2( 3, 2 )
+tile_set = SubResource( 4 )
+format = 1
+tile_data = PoolIntArray( 131078, 0, 0 )
+
+[node name="TileMap10" type="TileMap" parent="Control2"]
+position = Vector2( -181.724, -1261.02 )
+scale = Vector2( 3, 2 )
+tile_set = SubResource( 4 )
+format = 1
+tile_data = PoolIntArray( 131078, 0, 0 )
+
+[node name="TileMap11" type="TileMap" parent="Control2"]
+position = Vector2( -502.514, -1502.83 )
+scale = Vector2( 3, 2 )
+tile_set = SubResource( 4 )
+format = 1
+tile_data = PoolIntArray( 131078, 0, 0 )
+
+[node name="TileMap12" type="TileMap" parent="Control2"]
+position = Vector2( -837.784, -1704.72 )
+scale = Vector2( 3, 2 )
+tile_set = SubResource( 4 )
+format = 1
+tile_data = PoolIntArray( 131078, 0, 0 )
+
+[node name="TileMap13" type="TileMap" parent="Control2"]
+position = Vector2( -1092.03, -1865.04 )
+scale = Vector2( 3, 2 )
+tile_set = SubResource( 4 )
+format = 1
+tile_data = PoolIntArray( 131078, 0, 0 )
+
+[node name="TileMap16" type="TileMap" parent="Control2"]
+position = Vector2( -742.496, -2088.44 )
+scale = Vector2( 3, 2 )
+tile_set = SubResource( 4 )
+format = 1
+tile_data = PoolIntArray( 131078, 0, 0 )
+
+[node name="TileMap" type="TileMap" parent="Control2"]
+position = Vector2( -169, 172 )
+scale = Vector2( 3, 2 )
+tile_set = SubResource( 5 )
+format = 1
+tile_data = PoolIntArray( 196613, 0, 0, 196614, 0, 0 )
+
+[node name="Control4" type="Control" parent="."]
+margin_right = 40.0
+margin_bottom = 40.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ParallaxBackground3" type="ParallaxBackground" parent="Control4"]
+follow_viewport_enable = true
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="Control4/ParallaxBackground3"]
+
+[node name="Sprite" type="Sprite" parent="Control4/ParallaxBackground3"]
+position = Vector2( 1570.35, 757.197 )
+scale = Vector2( 14.0322, 2.02321 )
+texture = ExtResource( 5 )
+offset = Vector2( -55.905, -182.715 )
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="Control4"]
+follow_viewport_enable = true
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="Control4/ParallaxBackground"]
+
+[node name="Sprite" type="Sprite" parent="Control4/ParallaxBackground"]
+position = Vector2( 1566.73, 764.401 )
+scale = Vector2( 2.88297, 2.44 )
+texture = ExtResource( 4 )
+offset = Vector2( -271.302, -182.272 )
+
+[node name="ParallaxBackground4" type="ParallaxBackground" parent="Control4"]
+follow_viewport_enable = true
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="Control4/ParallaxBackground4"]
+
+[node name="TileMap" type="TileMap" parent="Control4/ParallaxBackground4"]
+position = Vector2( -1472.84, -209.698 )
+scale = Vector2( 1.2, 1.2 )
+tile_set = SubResource( 6 )
+cell_size = Vector2( 32, 32 )
+collision_layer = 0
+collision_mask = 0
+format = 1
+tile_data = PoolIntArray( 1048615, 0, 0, 1048616, 1, 0, 1114151, 2, 0, 1114152, 3, 0 )
+
+[node name="TileMap2" type="TileMap" parent="Control4/ParallaxBackground4"]
+position = Vector2( -919.879, -208.284 )
+scale = Vector2( 1.2, 1.2 )
+tile_set = SubResource( 6 )
+cell_size = Vector2( 32, 32 )
+collision_layer = 0
+collision_mask = 0
+format = 1
+tile_data = PoolIntArray( 1048615, 0, 0, 1048616, 1, 0, 1114151, 2, 0, 1114152, 3, 0 )
+
+[node name="TileMap3" type="TileMap" parent="Control4/ParallaxBackground4"]
+position = Vector2( -9.10675, -171.47 )
+scale = Vector2( 1.2, 1.2 )
+tile_set = SubResource( 6 )
+cell_size = Vector2( 32, 32 )
+collision_layer = 0
+collision_mask = 0
+format = 1
+tile_data = PoolIntArray( 1048615, 0, 0, 1048616, 1, 0, 1114151, 2, 0, 1114152, 3, 0 )
+
+[node name="Sprite" type="Sprite" parent="Control4/ParallaxBackground4"]
+position = Vector2( 1572.06, 763.523 )
+texture = ExtResource( 7 )
+offset = Vector2( -310.409, -348.212 )
+
+[node name="ParallaxBackground2" type="ParallaxBackground" parent="Control4"]
+follow_viewport_enable = true
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="Control4/ParallaxBackground2"]
+
+[node name="Sprite" type="Sprite" parent="Control4/ParallaxBackground2"]
+position = Vector2( 1569.04, 772.377 )
+scale = Vector2( 14.0242, 2.50959 )
+texture = ExtResource( 6 )
+offset = Vector2( -55.8629, -79.2263 )
+
+[node name="Control8" type="Control" parent="."]
+margin_left = -2110.0
+margin_top = -3.0
+margin_right = -2070.0
+margin_bottom = 37.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TileMap" type="TileMap" parent="Control8"]
+position = Vector2( -1006.72, -301.953 )
+scale = Vector2( 1.5, 1.5 )
+tile_set = SubResource( 7 )
+cell_size = Vector2( 32, 32 )
+format = 1
+tile_data = PoolIntArray( 917571, 5, 0, 983107, 5, 0, 1048642, 2, 0, 1048643, 5, 0, 1114177, 3, 0, 1114178, 1, 0, 1114179, 6, 0, 1114180, 8, 0, 1179713, 4, 0, 1179714, 0, 0, 1179715, 7, 0, 1179716, 9, 0 )
+
+[node name="TileMap2" type="TileMap" parent="Control8"]
+position = Vector2( -1294.86, -445.833 )
+scale = Vector2( 1.5, 1.5 )
+tile_set = SubResource( 8 )
+cell_size = Vector2( 32, 32 )
+format = 1
+tile_data = PoolIntArray( 983111, 0, 0, 983112, 2, 0, 983113, 4, 0, 983114, 6, 0, 1048647, 1, 0, 1048648, 3, 0, 1048649, 5, 0, 1048650, 7, 0 )
+
+[node name="TileMap3" type="TileMap" parent="Control8"]
+position = Vector2( 720.483, -189.394 )
+tile_set = SubResource( 9 )
+cell_size = Vector2( 32, 32 )
+collision_layer = 0
+collision_mask = 0
+format = 1
+tile_data = PoolIntArray( 1507383, 0, 0, 1507384, 2, 0, 1507385, 2, 0, 1507386, 2, 0, 1507387, 2, 0, 1507388, 2, 0, 1507389, 2, 0, 1507390, 2, 0, 1507391, 2, 0, 1507392, 4, 0, 1572919, 1, 0, 1572920, 3, 0, 1572921, 3, 0, 1572922, 3, 0, 1572923, 3, 0, 1572924, 3, 0, 1572925, 3, 0, 1572926, 3, 0, 1572927, 3, 0, 1572928, 5, 0 )
+
+[node name="TileMap4" type="TileMap" parent="Control8"]
+position = Vector2( 848.444, -188.272 )
+tile_set = SubResource( 9 )
+cell_size = Vector2( 32, 32 )
+collision_layer = 0
+collision_mask = 0
+format = 1
+tile_data = PoolIntArray( 1507383, 0, 0, 1507384, 2, 0, 1507385, 2, 0, 1507386, 2, 0, 1507387, 2, 0, 1507388, 2, 0, 1507389, 2, 0, 1507390, 2, 0, 1507391, 2, 0, 1507392, 4, 0, 1572919, 1, 0, 1572920, 3, 0, 1572921, 3, 0, 1572922, 3, 0, 1572923, 3, 0, 1572924, 3, 0, 1572925, 3, 0, 1572926, 3, 0, 1572927, 3, 0, 1572928, 5, 0 )
+
+[node name="plt_bd" type="StaticBody2D" parent="Control8"]
+position = Vector2( 1600, 284 )
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Control8/plt_bd"]
+position = Vector2( 613, 46 )
+shape = SubResource( 10 )
+
+[node name="floor1" type="StaticBody2D" parent="Control8"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Control8/floor1"]
+position = Vector2( 2706.5, 583 )
+shape = SubResource( 11 )
+
+[node name="Control7" type="Control" parent="."]
+margin_left = -1485.0
+margin_top = -3.0
+margin_right = -1445.0
+margin_bottom = 37.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="trap_map" type="TileMap" parent="Control7"]
+position = Vector2( -6.35681, -2.1189 )
+scale = Vector2( 1.5, 1.5 )
+tile_set = SubResource( 12 )
+cell_size = Vector2( 32, 15 )
+collision_layer = 0
+collision_mask = 0
+format = 1
+tile_data = PoolIntArray( 1638435, 0, 0, 1638436, 0, 0, 1638437, 0, 0, 1638438, 0, 0 )
+
+[node name="trap_map2" type="TileMap" parent="Control7"]
+position = Vector2( 248.133, -2.1189 )
+scale = Vector2( 1.5, 1.5 )
+tile_set = SubResource( 12 )
+cell_size = Vector2( 32, 15 )
+collision_layer = 0
+collision_mask = 0
+format = 1
+tile_data = PoolIntArray( 1638435, 0, 0, 1638436, 0, 0, 1638437, 0, 0, 1638438, 0, 0 )
+
+[node name="trap_map3" type="TileMap" parent="Control7"]
+position = Vector2( 619.585, -2.1189 )
+scale = Vector2( 1.5, 1.5 )
+tile_set = SubResource( 12 )
+cell_size = Vector2( 32, 15 )
+collision_layer = 0
+collision_mask = 0
+format = 1
+tile_data = PoolIntArray( 1638435, 0, 0, 1638436, 0, 0, 1638437, 0, 0, 1638438, 0, 0 )
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2( 1327.23, 628.638 )
+shape = SubResource( 13 )
+[connection signal="body_entered" from="Area2D" to="." method="_on_Area2D_body_entered"]

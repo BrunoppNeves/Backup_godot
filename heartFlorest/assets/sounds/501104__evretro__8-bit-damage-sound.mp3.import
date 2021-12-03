@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/501104__evretro__8-bit-damage-sound.mp3-cb64f5508c294363d81c9cf74b8382f3.mp3str"
+
+[deps]
+
+source_file="res://assets/sounds/501104__evretro__8-bit-damage-sound.mp3"
+dest_files=[ "res://.import/501104__evretro__8-bit-damage-sound.mp3-cb64f5508c294363d81c9cf74b8382f3.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0
